@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Bubblegum+Sans&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Bubblegum Sans', cursive;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.sparkle-bg {
+  background: radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.2) 0%, transparent 50%);
+  animation: sparkle 4s ease-in-out infinite;
+}
+
+.princess-card:hover {
+  transform: scale(1.05) rotate(1deg);
+  transition: all 0.3s ease;
+}
+
+.castle-card:hover {
+  transform: scale(1.03);
+  transition: all 0.3s ease;
+}
+
+.option-item:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+.mirror-frame {
+  background: linear-gradient(45deg, #FFD700, #FFA500, #FFD700);
+  border-radius: 50%;
+  padding: 20px;
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+}
+
+.fairy-button {
+  background: linear-gradient(45deg, #FF69B4, #FFB6C1);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-family: 'Fredoka One', cursive;
+  font-size: 18px;
+  padding: 15px 30px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+  transition: all 0.3s ease;
+}
+
+.fairy-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 105, 180, 0.4);
+}
+
+.floating-hearts {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #FF69B4;
+  transform: rotate(45deg);
+  animation: float 3s ease-in-out infinite;
+}
+
+.floating-hearts:before,
+.floating-hearts:after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #FF69B4;
+  border-radius: 50%;
+}
+
+.floating-hearts:before {
+  top: -10px;
+  left: 0;
+}
+
+.floating-hearts:after {
+  top: 0;
+  left: -10px;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(45deg); }
+  50% { transform: translateY(-20px) rotate(45deg); }
+}
+
+.shimmer-effect {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  background-size: 200px 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200px 0; }
+  100% { background-position: 200px 0; }
+}
+
+/* Custom border width for better definition */
+.border-3 {
+  border-width: 3px;
+}
